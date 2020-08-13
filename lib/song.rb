@@ -59,7 +59,11 @@ class Song
   # Build a class constructor that accepts a filename in the format 
   # parse the filename correctly but should also save the Song instance that was created
   def self.create_from_filename(name)
-    
+    song = self.new
+    song.name = name.split(" - ")[1].delete_suffix(".mp3")
+    #song = name[1]
+    song.artist_name = name.split(" - ")[0]
+    song
   end
   
   def self.destroy_all
