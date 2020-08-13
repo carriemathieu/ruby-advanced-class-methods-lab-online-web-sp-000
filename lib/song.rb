@@ -52,7 +52,7 @@ class Song
     song = self.new
     name = name.delete_suffix(".mp3").split("- ")[1]
     #song = name[1]
-    artist_name = name[0]
+    artist_name = name.split("- ")[1]
   end
   
   # Build a class constructor that accepts a filename in the format 
