@@ -50,7 +50,7 @@ class Song
   # return a new Song instance with the song name set to Blank Space and the artist_name set to Taylor Swift
   def self.new_from_filename(name)
     song = self.new
-    song.name = name.delete_suffix(".mp3").split(" - ")[1]
+    song.name = name.split(" - ")[1].delete_suffix(".mp3")
     #song = name[1]
     song.artist_name = name.split("- ")[0]
     song
