@@ -53,6 +53,7 @@ class Song
     song.name = name.delete_suffix(".mp3").split("- ")[1]
     #song = name[1]
     song.artist_name = name.split("- ")[0]
+    song
   end
   
   # Build a class constructor that accepts a filename in the format 
