@@ -63,6 +63,7 @@ class Song
     song.name = name.split(" - ")[1].delete_suffix(".mp3")
     #song = name[1]
     song.artist_name = name.split(" - ")[0]
+    @@all << song
     song
   end
   
